@@ -21,3 +21,37 @@ body {
   color: var(--color-text);
   font-family: var(--font-mono), monospace;
 }
+.card{
+  display: block;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding : 1.5rem;
+  background-color: var(--color-surface);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+
+.card:hover{
+  border-color: var(--color-accent);
+  box-shadow: 0 0 12px rgba(57, 255, 20, 0.15);
+  transform: translateY(-2px);
+}
+
+.nav-link {                                                                    
+  color: var(--color-text-muted);                                              
+  text-decoration: none;                                                       
+  transition: color 0.3s;                                                      
+}
+
+.nav-link:hover {
+  color: var(--color-accent);
+}
+/* 
+ポイント
+transition - 「何を・どのくらいの時間で変化させるか」を指定。これがないとホバー時にパッと一瞬で変わってしまう。
+border-color 0.3s - 0.3秒かけて枠線の色が変わる
+box-shadow - ホバー時に蛍光グリーンのぼんやりとした光を出す。研究所モニターの発酵ぽさ
+transform: translateY(-2px) - カードが2px浮き上がる。「押せるもの」だと直感的にわかる
+.card と .card:hover - 通常状態とホバー状態を分けて書く。これがCSSの基本
+*/

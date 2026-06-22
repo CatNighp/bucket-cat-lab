@@ -25,19 +25,10 @@ export default function CharactersPage() {
             <section style={{ padding: "3rem 2rem" }}>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "1.5rem" }}>
                     {characters.map((character) => (
-                        <Link
-                            key={character.id}
-                            href={`character/${character.id}`}
-                            style={{
-                                display: "block",
-                                border: "1px solid var(--color-border)",
-                                borderRadius: "4px",
-                                padding: "1.5rem",
-                                backgroundColor: "var(--color-surface)",
-                                textDecoration: "none",
-                                color: "inherit",
-                            }}
-                        >
+                        <Link 
+                        key={character.id}
+                        href={`characters/${character.id}`}
+                        className="card">
                             <img
                                 src={character.image}
                                 alt={character.name}

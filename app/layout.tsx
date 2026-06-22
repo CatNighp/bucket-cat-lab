@@ -50,8 +50,8 @@ export default function RootLayout({
             バケットネコ研究所
           </a>
           <nav style={{ display: "flex", gap: "1.5rem" }}>
-            <a href="/" style={{ color: "var(--color-text-muted)", textDecoration: "none" }}>TOP</a>
-            <a href="/characters" style={{ color: "var(--color-text-muted)", textDecoration: "none" }}>CHARACTERS</a>
+            <a href="/" className="nav-link">TOP</a>
+            <a href="/characters" className="nav-link">CHARACTERS</a>
           </nav>
         </header>
         <main style={{ flex: 1 }}>
