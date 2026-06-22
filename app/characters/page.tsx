@@ -45,7 +45,7 @@ export default function CharactersPage() {
                                 {character.name}
                             </h3>
                             <p style={{ fontSize: "0.9rem", color: "var(--color-text-muted)" }}>
-                                {character.description}
+                                {character.occupation}
                             </p>
                         </Link>
                     ))}
