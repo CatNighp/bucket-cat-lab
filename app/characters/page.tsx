@@ -38,6 +38,17 @@ export default function CharactersPage() {
                                 color: "inherit",
                             }}
                         >
+                            <img
+                                src={character.image}
+                                alt={character.name}
+                                style={{
+                                    width: "100%",
+                                    height: "160px",
+                                    objectFit: "cover",
+                                    borderRadius: "4px",
+                                    marginBottom: "0.75rem",
+                                }}
+                            />
                             <p style={{ fontSize: "0.75rem", color: "var(--color-text-muted)" }}>
                                 ID: {character.id}
                             </p>

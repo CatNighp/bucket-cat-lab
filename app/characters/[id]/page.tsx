@@ -41,6 +41,18 @@ export default async function CharacterPage({ params }: Props) {
                 <h1 style={{ fontSize: "2rem", fontWeight: "bold", margin: "0.5rem 0 1.5rem" }}>
                     {character.name}
                 </h1>
+                <div style={{ marginBottom: "1.5rem", textAlign: "center" }}>
+                <img
+                src={character.image}
+                alt={character.name}
+                style={{
+                    maxWidth: "300px",
+                    width: "100%",
+                    borderRadius:"4px",
+                    border: "1px solid var(--color-border)",
+                }}
+                />
+                </div>
                 {/* プロフィールカード */}
                 <div
                     style={{
