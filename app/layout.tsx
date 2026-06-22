@@ -51,13 +51,35 @@ export default function RootLayout({
           </a>
           <nav style={{ display: "flex", gap: "1.5rem" }}>
             <a href="/" style={{ color: "var(--color-text-muted)", textDecoration: "none" }}>TOP</a>
-            <a href="/characters" style= {{ color: "var(--color-text-muted)", textDecoration: "none" }}>CHARACTERS</a>
+            <a href="/characters" style={{ color: "var(--color-text-muted)", textDecoration: "none" }}>CHARACTERS</a>
           </nav>
         </header>
         <main style={{ flex: 1 }}>
           {children}
         </main>
+        {/* フッダー */}
+        <footer
+          style={{
+            borderTop: "1px solid var(--color-border)",
+            padding: "2rem",
+            textAlign: "center",
+            fontSize: "0.8rem",
+            color: "var(--color-text-muted)",
+          }}
+        >
+          <p>&copy; 2026 バケットネコ研究所</p>
+        </footer>
       </body>
     </html>
   );
 }
+
+
+/*
+ポイント
+共通レイアウト - ここに書かれているレイアウトはどのページでも共通に使われるもの。反固定状態の骨組み
+
+&copy; - © を表すHTMLエンティティ。著作権表示でよく使う
+フッダーはヘッダーと対になる borderTopで区切り線を入れて統一感を出している
+
+*/
