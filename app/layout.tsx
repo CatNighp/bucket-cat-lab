@@ -37,15 +37,7 @@ export default function RootLayout({
         {children}を<main>で囲むことで、各ページの内容がここに入る
         globals.css で定着した --color-accent や --color-border をここで使っている
         */}
-        <header
-          style={{
-            borderBottom: "1px solid var(--color-border)",
-            padding: "1rem 2rem",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-          }}
-        >
+        <header className="site-header">
           <a href="/" style={{ color: "var(--color-accent)", fontWeight: "bold", fontSize: "1.2rem", textDecoration: "none" }}>
             バケットネコ研究所
           </a>
@@ -57,7 +49,7 @@ export default function RootLayout({
         <main style={{ flex: 1 }}>
           {children}
         </main>
-        {/* フッダー
+        {/* フッダー */}
         <footer
           style={{
             borderTop: "1px solid var(--color-border)",
@@ -68,7 +60,7 @@ export default function RootLayout({
           }}
         >
           <p>&copy; 2026 バケットネコ研究所</p>
-        </footer> */}
+        </footer>
       </body>
     </html>
   );
