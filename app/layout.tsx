@@ -57,7 +57,7 @@ export default function RootLayout({
         <main style={{ flex: 1 }}>
           {children}
         </main>
-        {/* フッダー */}
+        {/* フッダー
         <footer
           style={{
             borderTop: "1px solid var(--color-border)",
@@ -68,7 +68,7 @@ export default function RootLayout({
           }}
         >
           <p>&copy; 2026 バケットネコ研究所</p>
-        </footer>
+        </footer> */}
       </body>
     </html>
   );
