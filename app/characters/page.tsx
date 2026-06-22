@@ -11,7 +11,7 @@ export default function CharactersPage() {
                     padding: "3rem 2rem",
                 }}
             >
-                <p style={{ fontSize: "0.75rem", color: "var(color-text-muted)", letterSpacing: "0.2em" }}>
+                <p style={{ fontSize: "0.75rem", color: "var(--color-text-muted)", letterSpacing: "0.2em" }}>
                     DATABASE
                 </p>
                 <h1 style={{ fontSize: "2rem", fontWeight: "bold", margin: "0.5rem 0" }}>
@@ -40,7 +40,7 @@ export default function CharactersPage() {
                                     marginBottom: "0.75rem",
                                 }}
                             />
-                            <p style={{ fontSize: "0.75rem", color: "var(--color-text-muted)" }}>
+                            <p className="file-id">
                                 ID: {character.id}
                             </p>
                             <h3 style={{ fontSize: "1.25rem", fontWeight: "bold", margin: "0.5rem 0" }}>

@@ -12,13 +12,13 @@ export default function Home() {
           textAlign: "center",
         }}
       >
-        <p style={{ color: "var(--color-accent)", fontSize: "0.85rem", letterSpacing: "0.3em" }}>
+        <p className="hero-subtitle" style={{ color: "var(--color-accent)", fontSize: "0.85rem", letterSpacing: "0.3em" }}>
           -- WELCOME TO --
         </p>
-        <h1 style={{ fontSize: "2.5rem", fontWeight: "bold", margin: "0.5rem 0" }}>
+        <h1 className="hero-title" style={{ fontSize: "2.5rem", fontWeight: "bold", margin: "0.5rem 0" }}>
           バケットネコ研究所
         </h1>
-        <p style={{ color: "var(--color-text-muted)", fontSize: "0.95rem" }}>
+        <p className="hero-description" style={{ color: "var(--color-text-muted)", fontSize: "0.95rem" }}>
           Laboratory for Bucket Cat Research
         </p>
       </section>
@@ -44,7 +44,7 @@ export default function Home() {
                 marginBottom: "0.75rem",
               }}
               />
-              <p style={{ fontSize: "0.75rem", color: "var(--color-text-muted)" }}>
+              <p className="file-id">
                 ID: {character.id}
               </p>
               <h3 style={{ fontSize: "1.25rem", fontWeight: "bold", margin: "0.5rem 0" }}>

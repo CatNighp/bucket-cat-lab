@@ -21,6 +21,8 @@ body {
   color: var(--color-text);
   font-family: var(--font-mono), monospace;
 }
+
+@layer components{
 .card{
   display: block;
   border: 1px solid var(--color-border);
@@ -30,12 +32,29 @@ body {
   text-decoration: none;
   color: inherit;
   transition: border-color 0.3s, box-shadow 0.3s, transform 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--color-accent);
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
 .card:hover{
   border-color: var(--color-accent);
   box-shadow: 0 0 12px rgba(57, 255, 20, 0.15);
   transform: translateY(-2px);
+}
+.card:hover::before{
+  opacity: 1;
 }
 
 .nav-link {                                                                    
@@ -47,6 +66,43 @@ body {
 .nav-link:hover {
   color: var(--color-accent);
 }
+
+/* ダイルIDラベル */
+.file-id{
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  border-bottom: 1px dashed var(--color-border);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+@keyframes fadeInUp{
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-title{
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.hero-subtitle{
+  animation: fadeInUp 0.8s ease-out 0.2s;
+  animation-fill-mode: both;
+}
+
+.hero-description {
+  animation: fadeInUp 0.8s ease-out 0.4s;
+  animation-fill-mode: both;
+}
+
+}
+
 /* 
 ポイント
 transition - 「何を・どのくらいの時間で変化させるか」を指定。これがないとホバー時にパッと一瞬で変わってしまう。
@@ -54,4 +110,19 @@ border-color 0.3s - 0.3秒かけて枠線の色が変わる
 box-shadow - ホバー時に蛍光グリーンのぼんやりとした光を出す。研究所モニターの発酵ぽさ
 transform: translateY(-2px) - カードが2px浮き上がる。「押せるもの」だと直感的にわかる
 .card と .card:hover - 通常状態とホバー状態を分けて書く。これがCSSの基本
+
+:: before - 擬似要素。HTMLを追加せずにCSSだけで装飾パーツを生成できる。content: ""が必須
+position: relative(親) + position: absolute(子) - 親要素を基準として子要素の一を決める。これでカードの左端にピッタリ張り付く
+overflow: hidden - はみ出した部分を隠す。角丸からアクセントラインがはみ出さないようにする
+ホバー時に
+ opacity: 0→1 - 普段は見えず、ホバーpするとスッと緑のラインが現れる演出
+
+@layer components - Tailwind CSS 4 のレイアウトシステムに「これはコンポーネントのスタイルです」と明示する
+Tailwind は base → components → utilities の順に優先度がある @layer なしだとどこに属するか曖昧になり、うまく適応されないことがある
+
+@keyframes - アニメーションの「動きの定義」。from(開始状態)→to (狩猟状態)を指定する
+fadeInUp - したから上にスッと現れる動き。 opacity: 0→1（透明→不透明）＋translate(20px)→0(20pxしたから元の位置へ)
+３つのクラスの違いは0.2sずつのズレ（遅延）。タイトル→サブタイトル→説明文の順に時間差で現れる「連鎖アニメーション」
+animation-fill-mode:both - アニメーション開始前はfrom の状態(透明))を維持する。これがないと遅延中に一瞬表示されてしまう。
+
 */
