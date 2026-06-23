@@ -1,4 +1,4 @@
-import Link from "next/link";
+import CharacterCard from "../components/CharacterCard";
 import { characters } from "@/data/characters";
 
 export default function CharactersPage() {
@@ -25,33 +25,7 @@ export default function CharactersPage() {
             <section style={{ padding: "3rem 2rem" }}>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "1.5rem" }}>
                     {characters.map((character) => (
-                        <Link 
-                        key={character.id}
-                        href={`characters/${character.id}`}
-                        className="card">
-                            {character.image && (  
-                                <img
-                                src={character.image}
-                                alt={character.name}
-                                style={{
-                                    width: "100%",
-                                    height: "160px",
-                                    objectFit: "cover",
-                                    borderRadius: "4px",
-                                    marginBottom: "0.75rem",
-                                }}
-                                />
-                            )}
-                            <p className="file-id">
-                                ID: {character.id}
-                            </p>
-                            <h3 style={{ fontSize: "1.25rem", fontWeight: "bold", margin: "0.5rem 0" }}>
-                                {character.name}
-                            </h3>
-                            <p style={{ fontSize: "0.9rem", color: "var(--color-text-muted)" }}>
-                                {character.occupation}
-                            </p>
-                        </Link>
+                        < CharacterCard key={character.id} character={character}/>
                     ))}
                 </div>
 
