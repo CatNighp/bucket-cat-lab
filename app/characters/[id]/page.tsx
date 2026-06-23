@@ -41,6 +41,7 @@ export default async function CharacterPage({ params }: Props) {
                 <h1 style={{ fontSize: "2rem", fontWeight: "bold", margin: "0.5rem 0 1.5rem" }}>
                     {character.name}
                 </h1>
+                {character.image && ( 
                 <div style={{ marginBottom: "1.5rem", textAlign: "center" }}>
                 <img
                 src={character.image}
@@ -53,6 +54,7 @@ export default async function CharacterPage({ params }: Props) {
                 }}
                 />
                 </div>
+                )}
                 {/* プロフィールカード */}
                 <div
                     style={{

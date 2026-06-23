@@ -29,7 +29,8 @@ export default function CharactersPage() {
                         key={character.id}
                         href={`characters/${character.id}`}
                         className="card">
-                            <img
+                            {character.image && (  
+                                <img
                                 src={character.image}
                                 alt={character.name}
                                 style={{
@@ -39,7 +40,8 @@ export default function CharactersPage() {
                                     borderRadius: "4px",
                                     marginBottom: "0.75rem",
                                 }}
-                            />
+                                />
+                            )}
                             <p className="file-id">
                                 ID: {character.id}
                             </p>

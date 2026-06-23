@@ -33,6 +33,7 @@ export default function Home() {
             key={character.id}
             href={`/characters/${character.id}`} 
             className="card">
+              {character.image &&(
               <img 
               src={character.image}
               alt={character.name}
@@ -44,6 +45,7 @@ export default function Home() {
                 marginBottom: "0.75rem",
               }}
               />
+            )}
               <p className="file-id">
                 ID: {character.id}
               </p>
