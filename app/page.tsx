@@ -5,29 +5,23 @@ export default function Home() {
   return (
     <>
       {/* ヒーローセクション */}
-      <section
-        style={{
-          borderBottom: "1px solid var(--color-border)",
-          padding: "4rem 2rem",
-          textAlign: "center",
-        }}
-      >
-        <p className="hero-subtitle" style={{ color: "var(--color-accent)", fontSize: "0.85rem", letterSpacing: "0.3em" }}>
+      <section className="section-border">
+        <p className="hero-subtitle section-label">
           -- WELCOME TO --
         </p>
-        <h1 className="hero-title" style={{ fontSize: "2.5rem", fontWeight: "bold", margin: "0.5rem 0" }}>
+        <h1 className="hero-title heading-xl">
           バケットネコ研究所
         </h1>
-        <p className="hero-description" style={{ color: "var(--color-text-muted)", fontSize: "0.95rem" }}>
+        <p className="hero-description text-muted">
           Laboratory for Bucket Cat Research
         </p>
       </section>
       {/* キャラクター一覧（仮） */}
-      <section style={{ padding: "3rem 2rem" }}>
-        <h2 style={{ fontSize: "0.85rem", color: "var(--color-accent)", letterSpacing: "0.2em", marginBottom: "1.5em" }} >
+      <section className="section-content">
+        <h2 className="heading-section">
           -- RESEARCH SUBJECTS --
         </h2>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "1.5rem" }}>
+        <div className="card-grid">
           {characters.map((character) => (
             <CharacterCard key={character.id} character={character} />
           ))}

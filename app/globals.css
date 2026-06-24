@@ -121,6 +121,143 @@ body {
   animation-fill-mode: both;
 }
 
+/* セクション */
+.section-border{
+  border-bottom: 1px solid var(--color-border);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.section-content{
+  padding: 3rem 2rem;
+}
+
+/* セクションラベル */
+.section-label{
+  font-size: 0.85rem;
+  color: var(--color-accent);
+  letter-spacing: 0.3rem;
+}
+.section-label-sm{
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.2rem;
+}
+
+/* 見出し */
+.heading-xl{
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.heading-section{
+  font-size: 0.85rem;
+  color: var(--color-accent);
+  letter-spacing: 0.2em;
+  margin-bottom: 1.5em;
+}
+
+/* テキスト */
+.text-muted{
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.text-muted-sm{
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+/* グリッド */
+.card-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* サイトロゴ */
+.site-logo{
+  color: var(--color-accent);
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+/* フッター */
+.site-footer{
+  border-top: 1px solid var(--color-border);
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+/* パンくずナビ */
+.breadcrumb{
+  padding: 1rem 2rem;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.breadcrumb-link{
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.breadcrumb-separator{
+  margin: 0 0.5rem;
+}
+
+/* キャラ詳細 */
+.detail-container{
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.detail-image{
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.detail-image img{
+  max-width: 300px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid var(--color-border);
+}
+
+/* プロフィールカード */
+.profile-card{
+  border:1px solid var(--color-border);
+  border-radius: 4px;
+  background-color: var(--color-surface);
+  padding : 1.5rem;
+}
+
+.profile-card-title{
+  font-size: 0.8rem;
+  color: var(--color-accent);
+  letter-spacing: 0.15rem;
+  margin-bottom:1rem;
+}
+
+.profile-grid{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem 1rem;
+}
+
+.profile-label {
+  color: var(--color-accent);
+  font-size: 0.75rem;
+}
+
+.profile-value{
+  color: var(--color-text-muted);
+}
+
+
 }
 
 /* 

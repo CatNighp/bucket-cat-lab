@@ -19,84 +19,56 @@ export default async function CharacterPage({ params }: Props) {
     return (
         <>
             {/* パンくずナビ */}
-            <div style={{ padding: "1rem 2rem", fontSize: "0.8rem", color: "var(--color-text-muted)" }}>
-                <Link href="/" style={{ color: "var(--color-accent)", textDecoration: "none" }}>
+            <div className="breadcrumb">
+                <Link href="/" className="breadcrumb-link">
                     TOP
                 </Link>
-                <span style={{ margin: "0 0.5rem" }}>/</span>
+                <span className="breadcrumb-separator">/</span>
                 <span>{character.name}</span>
             </div>
             {/* キャラクター詳細 */}
-            <section
-                style={{
-                    maxWidth: "720px",
-                    margin: "0 auto",
-                    padding: "2rem",
-                }}
-            >
+            <section className="detail-container">
                 {/* ヘッダー部分 */}
-                <p style={{ fontSize: "0.75rem", color: "var(--color-text-muted)", letterSpacing: "0.2rem" }}>
+                <p className="section-label-sm">
                     SUBJECT FILE: {character.id}
                 </p>
-                <h1 style={{ fontSize: "2rem", fontWeight: "bold", margin: "0.5rem 0 1.5rem" }}>
+                <h1 className="heading-lg" style={{ margin: "0.5rem 0 1.5rem" }}>
                     {character.name}
                 </h1>
                 {character.image && ( 
-                <div style={{ marginBottom: "1.5rem", textAlign: "center" }}>
-                <img
-                src={character.image}
-                alt={character.name}
-                style={{
-                    maxWidth: "300px",
-                    width: "100%",
-                    borderRadius:"4px",
-                    border: "1px solid var(--color-border)",
-                }}
-                />
+                <div className="detail-image">
+                <img src={character.image} alt={character.name}/>
                 </div>
                 )}
                 {/* プロフィールカード */}
-                <div
-                    style={{
-                        border: "1px solid var(--color-border)",
-                        borderRadius: "4px",
-                        backgroundColor: "var(--color-surface)",
-                        padding: "1.5rem"
-                    }}
-                >
-                    <h2 style={{ fontSize: "0.8rem", color: "var(--color-accent)", letterSpacing: "0.15rem", marginBottom: "1rem" }}>
+                <div className="profile-grid">
+                    <h2 className="profile-card-title">
                         PROFILE
                     </h2>
-                    <dl style={{
-                        display: "grid", gridTemplateColumns: "auto 1fr", gap: "0.75rem 1rem"
-                    }}>
-                        <dt style={{ color: "var(--color-accent)", fontSize: "0.75rem" }}>性別</dt>
-                        <dd style={{ color: "var(--color-text-muted)" }}>{character.gender}</dd>
+                    <dl className="profile-grid">
+                        <dt className="profile-label">性別</dt>
+                        <dd className="profile-value">{character.gender}</dd>
 
-                        <dt style={{ color: "var(--color-accent)", fontSize: "0.75rem" }}>年齢</dt>
-                        <dd style={{ color: "var(--color-text-muted)" }}>{character.age}</dd>
+                        <dt className="profile-label">年齢</dt>
+                        <dd className="profile-value">{character.age}</dd>
 
-                        <dt style={{ color: "var(--color-accent)", fontSize: "0.75rem" }}>誕生日</dt>
-                        <dd style={{ color: "var(--color-text-muted)" }}>{character.birthday}</dd>
+                        <dt className="profile-label">誕生日</dt>
+                        <dd className="profile-value">{character.birthday}</dd>
 
-                        <dt style={{ color: "var(--color-accent)", fontSize: "0.75rem" }}>職業</dt>
-                        <dd style={{ color: "var(--color-text-muted)" }}>{character.occupation}</dd>
+                        <dt className="profile-label">職業</dt>
+                        <dd className="profile-value">{character.occupation}</dd>
 
-                        <dt style={{ color: "var(--color-accent)", fontSize: "0.75rem" }}>概要</dt>
-                        <dd style={{ color: "var(--color-text-muted)" }}>{character.summary}</dd>
+                        <dt className="profile-label">紹介</dt>
+                        <dd className="profile-value">{character.summary}</dd>
 
-                        <dt style={{
-                            color: "var(--color-accent)", fontSize: "0.75rem"
-                        }}>志望動機</dt>
-                        <dd style={{
-                            color: "var(--color-text-muted)"
-                        }}>{character.occupationReason}</dd>
+                        <dt className="profile-label">きっかけ</dt>
+                        <dd className="profile-value">{character.occupationReason}</dd>
 
-                        <dt style={{ color: "var(--color-accent)", fontSize: "0.75rem" }}>性格</dt>
-                        <dd style={{ color: "var(--color-text-muted)" }}>{character.personality}</dd>
+                        <dt className="profile-label">性格</dt>
+                        <dd className="profile-value">{character.personality}</dd>
 
-                        <dt style={{ color: "var(--color-accent)", fontSize: "0.75rem" }}>外見</dt>
-                        <dd style={{ color: "var(--color-text-muted)" }}>{character.appearance}</dd>
+                        <dt className="profile-label">外見</dt>
+                        <dd className="profile-value">{character.appearance}</dd>
                     </dl>
                 </div >
             </section >

@@ -6,24 +6,21 @@ export default function CharactersPage() {
         <>
             {/* ページヘッダー */}
             <section
-                style={{
-                    borderBottom: "1px solid var(--color-border)",
-                    padding: "3rem 2rem",
-                }}
+                className="section-border" style={{ padding: "3rem 2rem" }}
             >
-                <p style={{ fontSize: "0.75rem", color: "var(--color-text-muted)", letterSpacing: "0.2em" }}>
+                <p className="section-label-sm">
                     DATABASE
                 </p>
-                <h1 style={{ fontSize: "2rem", fontWeight: "bold", margin: "0.5rem 0" }}>
+                <h1 className="heading-lg">
                     研究対象一覧
                 </h1>
-                <p style={{ color: "var(--color-text-muted)", fontSize: "0.9rem" }}>
+                <p className="text-muted-sm">
                     登録済みの研究対象: {characters.length}件
                 </p>
             </section>
             {/* キャラクター一覧 */}
-            <section style={{ padding: "3rem 2rem" }}>
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "1.5rem" }}>
+            <section className="section-content">
+                <div className="card-grid">
                     {characters.map((character) => (
                         < CharacterCard key={character.id} character={character}/>
                     ))}

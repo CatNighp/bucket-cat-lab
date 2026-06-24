@@ -38,7 +38,7 @@ export default function RootLayout({
         globals.css で定着した --color-accent や --color-border をここで使っている
         */}
         <header className="site-header">
-          <a href="/" style={{ color: "var(--color-accent)", fontWeight: "bold", fontSize: "1.2rem", textDecoration: "none" }}>
+          <a href="/" className="site-logo">
             バケットネコ研究所
           </a>
           <nav style={{ display: "flex", gap: "1.5rem" }}>
@@ -50,15 +50,7 @@ export default function RootLayout({
           {children}
         </main>
         {/* フッダー */}
-        <footer
-          style={{
-            borderTop: "1px solid var(--color-border)",
-            padding: "2rem",
-            textAlign: "center",
-            fontSize: "0.8rem",
-            color: "var(--color-text-muted)",
-          }}
-        >
+        <footer className="site-footer">
           <p>&copy; 2026 バケットネコ研究所</p>
         </footer>
       </body>
