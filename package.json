@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "lint:css": "stylelint \"app/**/*.css\""
   },
   "dependencies": {
     "next": "16.2.7",
@@ -20,6 +21,8 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.7",
+    "stylelint": "^17.14.0",
+    "stylelint-config-recommended": "^18.0.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
