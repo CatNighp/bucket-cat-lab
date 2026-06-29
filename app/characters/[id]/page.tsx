@@ -1,6 +1,7 @@
 import { getCharacter } from "@/data/characters";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import TagList from "@/app/components/TagList";
 
 type Props = {
     params: Promise<{
@@ -35,6 +36,8 @@ export default async function CharacterPage({ params }: Props) {
                 <h1 className="heading-lg" style={{ margin: "0.5rem 0 1.5rem" }}>
                     {character.name}
                 </h1>
+                {/* タグがあるときだけ表示。character.image && (...) と同じ条件表示パターン */}
+                {character.tags && <TagList tags={character.tags} />}
                 {character.image && ( 
                 <div className="detail-image">
                 <img src={character.image} alt={character.name}/>
