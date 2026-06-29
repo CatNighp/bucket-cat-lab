@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Character } from "@/data/characters";
+import TagList from "@/app/components/TagList";
 
 type Props = {
     character: Character;
@@ -33,6 +34,7 @@ export default function CharacterCard({ character }: Props) {
             <p style={{ fontSize: "0.9rem", color: "var(--color-text-muted)" }}>
                 {character.summary}
             </p>
+                {character.tags && <TagList tags={character.tags}/>}
         </Link>
     );
 }

@@ -257,6 +257,21 @@ body {
   color: var(--color-text-muted);
 }
 
+/* 研究タグ */
+.tag-list{
+  display: flex;        /* タグを横並びにする */
+  flex-wrap: wrap;      /* 入りきらなければ次の行へ折り返す */
+  gap: 0.5rem;          /* タグ同士のすき間 */
+  margin-bottom: 1.5rem;
+}
+
+.tag{
+  font-size: 0.75rem;
+  color: var(--color-accent);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;        /* 大きい値で「カプセル型」になる */
+  padding: 0.25rem 0.75rem;
+}
 
 }
 
