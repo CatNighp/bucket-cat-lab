@@ -175,6 +175,11 @@ body {
   gap: 1.5rem;
 }
 
+.card-length{
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
 /* サイトロゴ */
 .site-logo{
   color: var(--color-accent);
@@ -271,6 +276,27 @@ body {
   border: 1px solid var(--color-border);
   border-radius: 999px;        /* 大きい値で「カプセル型」になる */
   padding: 0.25rem 0.75rem;
+}
+
+/* 検索ボックス */
+.search-box{
+  width: 100%;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 1rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  color: var(--color-text);
+  font-family: inherit;        /* 周りと同じフォント（等幅）を引き継ぐ */
+}
+
+.search-box:focus{
+  outline: none;                       /* ブラウザ標準の青枠を消す */
+  border-color: var(--color-accent);   /* 代わりに研究所カラーの枠を出す */
+}
+
+.search-box::placeholder{
+  color: var(--color-text-muted);
 }
 
 }

@@ -1,4 +1,4 @@
-import CharacterCard from "../components/CharacterCard";
+import CharacterList from "../components/CharacterList";
 import { characters } from "@/data/characters";
 
 export default function CharactersPage() {
@@ -18,14 +18,9 @@ export default function CharactersPage() {
                     登録済みの研究対象: {characters.length}件
                 </p>
             </section>
-            {/* キャラクター一覧 */}
+            {/* キャラクター一覧（検索つき） */}
             <section className="section-content">
-                <div className="card-grid">
-                    {characters.map((character) => (
-                        < CharacterCard key={character.id} character={character}/>
-                    ))}
-                </div>
-
+                <CharacterList characters={characters} />
             </section>
         </>
     );
